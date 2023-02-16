@@ -1,7 +1,7 @@
 #include <stdio.h>
 /**
  * main -A program to plint message
- * return: 0(success)
+ * Return: 0 (success)
  */
 int main(void)
 {
