@@ -1,5 +1,8 @@
 #include <stdio.h>
-/* function main is now going to plint a message and return */
+/**
+ * main: is now going to plint a message and return puts method to display a message
+ * return: 0(success)
+ */
 int main(void)
 {
 puts("\"Programming is like building a multilingual puzzle");
