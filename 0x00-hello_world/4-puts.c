@@ -1,6 +1,6 @@
 #include <stdio.h>
 /**
- * main: is now going to plint a message and return puts method to display a message
+ * main -A program to plint message
  * return: 0(success)
  */
 int main(void)
