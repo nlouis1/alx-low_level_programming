@@ -16,6 +16,6 @@ int main(void)
 			}
 			c++;
 		}
-	putchat('\n');
+	putchar('\n');
 	return (0);
 }
