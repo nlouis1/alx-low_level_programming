@@ -13,8 +13,11 @@ int main(void)
 		{
 			putchar('0' + a);
 			putchar('0' + b);
-			putchar(',');
-			putchar(' ');
+			if ( a != 8 && b != 9)
+			{
+				putchar(',');
+				putchar(' ');
+			}
 		}
 	}
 	return (0);
