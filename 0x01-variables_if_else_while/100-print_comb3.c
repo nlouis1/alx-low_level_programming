@@ -12,11 +12,11 @@ int main(void)
 		if (a < 10)
 		{
 			putchar('0');
-			putchar(a);
+			putchar(a + '0');
 		}
 		if (a >= 10)
 		{
-			putchar(a);
+			putchar(a + '0');
 		}
 		putchar(',');
 		putchar(' ');
