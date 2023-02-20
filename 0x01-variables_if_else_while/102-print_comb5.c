@@ -11,19 +11,22 @@ int main(void)
 	{
 		for (b = 0; b <= 9 ; b++)
 		{
-			for (i = 0; i <= 9; i++)
+			for (i = a; i <= 9; i++)
 			{
 				for (j = 0; j <= 9; j++)
 				{
-					putchar('0' + a);
-					putchar('0' + b);
-					putchar(' ');
-					putchar('0' + i);
-					putchar('0' + j);
-					if (!(a == 9 && b == 8 && c == 9 && j == 9))
+					if (!(a == i && b <= j))
 					{
-						putchar(',');
+						putchar('0' + a);
+						putchar('0' + b);
 						putchar(' ');
+						putchar('0' + i);
+						putchar('0' + j);
+						if (!(a == 9 && b == 8 && i == 9 && j == 9))
+						{
+							putchar(',');
+							putchar(' ');
+						}
 					}
 				}
 			}
