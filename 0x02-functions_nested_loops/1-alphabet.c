@@ -1,7 +1,7 @@
 #include "main.h"
 /**
- * main -A program to display alphabet
- * return 0 (success)
+ * print_alphabet -program to display alphabet
+ * Void: return
  */
 void print_alphabet(void)
 {
