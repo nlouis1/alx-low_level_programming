@@ -9,14 +9,16 @@ the head node of a linked list
 int pop_listint(listint_t **head)
 {
 listint_t *popped;
-int body;
+int content;
 
 if (*head == NULL)
 return (0);
 
 popped = *head;
-body = popped->n;
+content = popped->n;
 free(popped);
+
 *head = (*head)->next;
-return (body);
+return (content);
+
 }
