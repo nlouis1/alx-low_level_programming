@@ -8,17 +8,22 @@ the head node of a linked list
 */
 int pop_listint(listint_t **head)
 {
-listint_t *popped;
-int content;
+	int noden;
+	listint_t *h;
+	listint_t *curr;
 
-if (*head == NULL)
-return (0);
+	if (*head == NULL)
+		return (0);
 
-popped = *head;
-content = popped->n;
-free(popped);
+	curr = *head;
 
-*head = (*head)->next;
-return (content);
+	noden = curr->n;
 
+	h = curr->next;
+
+	free(curr);
+
+	*head = h;
+
+	return (noden);
 }
