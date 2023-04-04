@@ -5,22 +5,19 @@
 *@head: pointing to the head of the list
 *Return: void(no return type)
 */
-
 void free_listint2(listint_t **head)
 {
-listint_t *pointing;
-listint_t **temp = head;
+	listint_t *temp;
+	listint_t *curr;
 
-if (temp != NULL)
-{
-while (*head != NULL)
-{
-pointing = *head;
-free(pointing);
-*head = (*head)->next;
-}
-
-*temp = NULL;
-
-}
+	if (head != NULL)
+	{
+		curr = *head;
+		while ((temp = curr) != NULL)
+		{
+			curr = curr->next;
+			free(temp);
+		}
+		*head = NULL;
+	}
 }
