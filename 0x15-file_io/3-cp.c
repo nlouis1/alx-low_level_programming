@@ -33,11 +33,11 @@ char *create_buffer(char *file)
  */
 void close_file(int fd)
 {
-	int c;
+	int x;
 
-	c = close(fd);
+	x = close(fd);
 
-	if (c == -1)
+	if (x == -1)
 	{
 		dprintf(STDERR_FILENO, "Error: Can't close fd %d\n", fd);
 		exit(100);
@@ -69,7 +69,7 @@ int main(int argc, char *argv[])
 	buffer = create_buffer(argv[2]);
 	filefrom = open(argv[1], O_RDONLY);
 	r = read(filefrom, buffer, 1024);
-	to = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
+	fileto = open(argv[2], O_CREAT | O_WRONLY | O_TRUNC, 0664);
 
 	do {
 		if (filefrom == -1 || r == -1)
@@ -81,7 +81,7 @@ int main(int argc, char *argv[])
 		}
 
 		w = write(fileto, buffer, r);
-		if (to == -1 || w == -1)
+		if (fileto == -1 || w == -1)
 		{
 			dprintf(STDERR_FILENO,
 				"Error: Can't write to %s\n", argv[2]);
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
 		}
 
 		r = read(filefrom, buffer, 1024);
-		to = open(argv[2], O_WRONLY | O_APPEND);
+		fileto = open(argv[2], O_WRONLY | O_APPEND);
 
 	} while (r > 0);
 
