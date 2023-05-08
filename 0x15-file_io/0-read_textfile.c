@@ -5,7 +5,7 @@
  * read_textfile - A Function that Reads a text file
  * and prints it to POSIX stdout.
  * @filename: This points to file.
- * @letters: The number of letters the function 
+ * @letters: The number of letters the function
  * should read and print.
  * Return: If the function fails or filename is NULL - 0.
  * O/w - number of bytes the function can read and print.
